@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-second',
-  template: `
+    selector: 'app-second',
+    template: `
     <p>
       second works!
     </p>
   `,
-  styles: [
-  ]
+    styles: [],
+    standalone: true
 })
 export class SecondComponent {
 

@@ -6,80 +6,83 @@
       [routerLinkActiveOptions]="{ exact: true }"
       routerLinkActive="active text-primary"
       >cvStartingAdvProject</a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="['']navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a
-          class="nav-link"
-          aria-current="page"
-          [routerLink]="['']"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLinkActive="active text-primary"
-          >Home</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="['']navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
         >
-        <a
-          class="nav-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-          [routerLink]="['cv']"
-          routerLinkActive="active text-primary"
-          >Cv</a
-        >
-        <a
-          *ngIf="authService.isAuthenticated()"
-          class="nav-link"
-          [routerLink]="['cv/add']"
-          routerLinkActive="active text-primary"
-          >Add Cv</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['todo']"
-          routerLinkActive="active text-primary"
-          >Todo</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['word']"
-          routerLinkActive="active text-primary"
-          >Word</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['admin', 'color']"
-          routerLinkActive="active text-primary"
-          >Color</a
-        >
-        <a
-          class="nav-link"
-          [routerLink]="['rh']"
-          routerLinkActive="active text-primary"
-          >Rh</a
-        >
-        <a
-          *ngIf="!authService.isAuthenticated()"
-          class="nav-link"
-          [routerLink]="['login']"
-          routerLinkActive="active text-primary"
-          >Login</a
-        >
-        <a
-          *ngIf="authService.isAuthenticated()"
-          class="nav-link"
-          (click)="logout()"
-          >Logout</a
-        >
-      </div>
-    </div>
-  </div>
-</nav>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a
+            class="nav-link"
+            aria-current="page"
+            [routerLink]="['']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active text-primary"
+            >Home</a
+            >
+            <a
+              class="nav-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['cv']"
+              routerLinkActive="active text-primary"
+              >Cv</a
+              >
+              @if (authService.isAuthenticated()) {
+                <a
+                  class="nav-link"
+                  [routerLink]="['cv/add']"
+                  routerLinkActive="active text-primary"
+                  >Add Cv</a
+                  >
+                }
+                <a
+                  class="nav-link"
+                  [routerLink]="['todo']"
+                  routerLinkActive="active text-primary"
+                  >Todo</a
+                  >
+                  <a
+                    class="nav-link"
+                    [routerLink]="['word']"
+                    routerLinkActive="active text-primary"
+                    >Word</a
+                    >
+                    <a
+                      class="nav-link"
+                      [routerLink]="['admin', 'color']"
+                      routerLinkActive="active text-primary"
+                      >Color</a
+                      >
+                      <a
+                        class="nav-link"
+                        [routerLink]="['rh']"
+                        routerLinkActive="active text-primary"
+                        >Rh</a
+                        >
+                        @if (!authService.isAuthenticated()) {
+                          <a
+                            class="nav-link"
+                            [routerLink]="['login']"
+                            routerLinkActive="active text-primary"
+                            >Login</a
+                            >
+                          }
+                          @if (authService.isAuthenticated()) {
+                            <a
+                              class="nav-link"
+                              (click)="logout()"
+                              >Logout</a
+                              >
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </nav>

@@ -8,8 +8,8 @@ describe('FromOfComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FromOfComponent]
-    });
+    declarations: [FromOfComponent]
+});
     fixture = TestBed.createComponent(FromOfComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

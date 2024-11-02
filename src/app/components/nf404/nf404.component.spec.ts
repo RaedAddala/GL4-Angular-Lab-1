@@ -8,8 +8,8 @@ describe('NF404Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NF404Component ]
-    })
+    imports: [NF404Component]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(NF404Component);

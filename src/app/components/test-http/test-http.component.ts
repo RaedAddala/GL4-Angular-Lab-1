@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AsyncPipe, JsonPipe } from '@angular/common';
 
 export interface TodoModel {
   userId: number;
@@ -10,9 +11,14 @@ export interface TodoModel {
 }
 
 @Component({
-  selector: 'app-test-http',
-  templateUrl: './test-http.component.html',
-  styleUrls: ['./test-http.component.css'],
+    selector: 'app-test-http',
+    templateUrl: './test-http.component.html',
+    styleUrls: ['./test-http.component.css'],
+    standalone: true,
+    imports: [
+    AsyncPipe,
+    JsonPipe
+],
 })
 export class TestHttpComponent {
   todos: TodoModel[] = [];
