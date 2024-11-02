@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { Cv } from "../model/cv";
 import { LoggerService } from "../../services/logger.service";
 import { ToastrService } from "ngx-toastr";
@@ -21,16 +21,19 @@ import { UpperCasePipe, DatePipe } from "@angular/common";
     ],
 })
 export class CvComponent {
+  private logger = inject(LoggerService);
+  private toastr = inject(ToastrService);
+  private cvService = inject(CvService);
+
   cvs: Cv[] = [];
   selectedCv: Cv | null = null;
   /*   selectedCv: Cv | null = null; */
   date = new Date();
 
-  constructor(
-    private logger: LoggerService,
-    private toastr: ToastrService,
-    private cvService: CvService
-  ) {
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {
     this.cvService.getCvs().subscribe({
       next: (cvs) => {
         this.cvs = cvs;

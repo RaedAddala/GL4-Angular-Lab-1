@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Cv } from '../model/cv';
 import { EmbaucheService } from '../services/embauche.service';
 import { ToastrService } from 'ngx-toastr';
@@ -17,10 +17,13 @@ import { DefaultImagePipe } from '../pipes/default-image.pipe';
 ],
 })
 export class CvCardComponent {
-  constructor(
-    private embaucheService: EmbaucheService,
-    private toastr: ToastrService
-  ) {}
+  private embaucheService = inject(EmbaucheService);
+  private toastr = inject(ToastrService);
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
   @Input() cv: Cv | null = null;
 
   ngOnInit() {}

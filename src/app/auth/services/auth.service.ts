@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { CredentialsDto } from '../dto/credentials.dto';
 import { LoginResponseDto } from '../dto/login-response.dto';
 import { HttpClient } from '@angular/common/http';
@@ -9,7 +9,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
 
   login(credentials: CredentialsDto): Observable<LoginResponseDto> {
     return this.http.post<LoginResponseDto>(API.login, credentials);
