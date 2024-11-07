@@ -1,18 +1,45 @@
 <div class="row">
   <div class="col">
+    <h3>Waiting</h3>
     <ol class="list-group">
-      @for (todo of todos; track todo) {
-        <li class="list-group-item">
-          {{todo.name}} : {{todo.content}}
-          <i (click)="deleteTodo(todo)" class="fa fa-trash" aria-hidden="true"></i>
-        </li>
-      }
+      <li *ngFor="let todo of getTodosByStatus('waiting')" class="list-group-item">
+        {{todo.name}} : {{todo.content}}
+        <button (click)="changeStatus(todo, 'in progress')" class="btn btn-sm btn-warning">Move to In Progress</button>
+        <button (click)="deleteTodo(todo)" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </li>
     </ol>
   </div>
+
   <div class="col">
-    name: <input [(ngModel)]="todo.name" type="text" class="form-control">
-    content: <input [(ngModel)]="todo.content" type="text" class="form-control">
-    <button (click)="addTodo()" [disabled]="!todo.name.trim() || !todo.content.trim()"
-    class="btn btn-primary m-2">add</button>
+    <h3>In Progress</h3>
+    <ol class="list-group">
+      <li *ngFor="let todo of getTodosByStatus('in progress')" class="list-group-item">
+        {{todo.name}} : {{todo.content}}
+        <button (click)="changeStatus(todo, 'done')" class="btn btn-sm btn-success">Move to Done</button>
+        <button (click)="deleteTodo(todo)" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </li>
+    </ol>
   </div>
+
+  <div class="col">
+    <h3>Done</h3>
+    <ol class="list-group">
+      <li *ngFor="let todo of getTodosByStatus('done')" class="list-group-item">
+        {{todo.name}} : {{todo.content}}
+        <button (click)="changeStatus(todo, 'waiting')" class="btn btn-sm btn-primary">Move to Waiting</button>
+        <button (click)="deleteTodo(todo)" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="col">
+  <h3>Add a ToDo</h3>
+  <label for="name">Name:</label>
+  <input [(ngModel)]="todo.name" type="text" class="form-control" placeholder="name" />
+
+  <label for="content">Content:</label>
+  <input [(ngModel)]="todo.content" type="text" class="form-control" placeholder="content" />
+
+  <button (click)="addTodo()" [disabled]="!todo.name.trim() || !todo.content.trim()" class="btn btn-primary m-2">Add</button>
 </div>
