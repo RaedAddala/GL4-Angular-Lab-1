@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/todo/todo/todo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/todo/todo/todo.component.html" afterDir="false" />
+    <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="use new control flow">
+      <change afterPath="$PROJECT_DIR$/src/config/storage-keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/services/auth.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +77,37 @@
       <updated>1730999893652</updated>
       <workItem from="1730999894706" duration="137000" />
       <workItem from="1731000042732" duration="3286000" />
-      <workItem from="1731011075167" duration="6394000" />
+      <workItem from="1731011075167" duration="16602000" />
+      <workItem from="1731097381463" duration="4138000" />
+      <workItem from="1731139817047" duration="2054000" />
     </task>
+    <task id="LOCAL-00001" summary="use new control flow">
+      <option name="closed" value="true" />
+      <created>1731046451812</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731046451812</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="use new control flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="use new control flow" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main.ts</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
