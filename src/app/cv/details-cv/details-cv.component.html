@@ -1,11 +1,16 @@
-<div class="d-flex justify-content-center" *ngIf="cv">
+<div class="d-flex justify-content-center" *ngIf="cv$ | async as cv">
   <div class="col-lg-8 push-lg-4">
     <div class="tab-content p-b-3">
       <div class="tab-pane active" id="profile">
         <h4 class="m-y-2">Cv {{ cv.firstname }} {{ cv.name }}</h4>
         <div class="d-flex justify-content-center">
-          <img width="150px" height="150px" class="rounded-circle align-content-center"
-            src="assets/images/{{ cv.path | defaultImage }}" alt="{{ cv.name }}" />
+          <img
+            width="150px"
+            height="150px"
+            class="rounded-circle align-content-center"
+            src="assets/images/{{ cv.path | defaultImage }}"
+            alt="{{ cv.name }}"
+          />
         </div>
         <div class="row">
           <div class="col-md-12">
@@ -33,7 +38,11 @@
               </tbody>
             </table>
             <div class="d-flex justify-content-center">
-              <button *ngIf="authService.isAuthenticated()" (click)="deleteCv(cv)" class="btn btn-danger">
+              <button
+                *ngIf="authService.isAuthenticated()"
+                (click)="deleteCv(cv)"
+                class="btn btn-danger"
+              >
                 Delete
               </button>
             </div>

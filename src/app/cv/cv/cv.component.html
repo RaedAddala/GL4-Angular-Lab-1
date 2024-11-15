@@ -3,10 +3,10 @@
     <div class="alert alert-warning">
       {{ date | date : "full" | uppercase }}
     </div>
-    <app-list [cvs]="cvs"></app-list>
+    <app-list [cvs]="cvs$ | async"></app-list>
   </div>
   <div class="col">
-    <app-cv-card [cv]="selectedCv"></app-cv-card>
+    <app-cv-card [cv]="selectedCv$ | async"></app-cv-card>
   </div>
 </div>
 <app-embauche></app-embauche>
