@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { API } from '../../../config/api.config';
 import {Observable, tap} from 'rxjs';
 import { LocalStorageKeys } from "../../../config/storage-keys";
+import {User} from "../dto/user.dto";
 @Injectable({
   providedIn: 'root',
 })
@@ -15,14 +16,11 @@ export class AuthService {
   constructor(...args: unknown[]);
 
   constructor() {  //load user state from local storage
-    this.isAuthenticated = signal<boolean>(!!localStorage.getItem('token'));
-    this.userId = signal<number | null>(null);
-    this.userEmail = signal<string | null>(null);
+    this.loadUserState();
   }
 
-  isAuthenticated = signal<boolean>(!!localStorage.getItem('token'));
-  userId = signal<number | null>(null);
-  userEmail = signal<string | null>(null);
+   isAuthenticated = signal<boolean>(!!localStorage.getItem('token'));
+   private user = signal<User | null>(null);
 
   login(credentials: CredentialsDto): Observable<LoginResponseDto> {
     return this.http.post<LoginResponseDto>(API.login, credentials).pipe(
@@ -31,11 +29,24 @@ export class AuthService {
         localStorage.setItem(LocalStorageKeys.USER_ID, response.userId.toString());
         localStorage.setItem(LocalStorageKeys.USER_EMAIL, credentials.email);
         this.isAuthenticated.set(true);
-        this.userId.set(response.userId);
-        this.userEmail.set(credentials.email);
+        this.user.set(new User(response.userId.toString(), credentials.email));
       }
     ));
   }
+  private loadUserState(): void {
+    const id = localStorage.getItem('userId');
+    const email = localStorage.getItem('userEmail');
+    const authStatus = localStorage.getItem('isAuthenticated') === 'true';
+
+    if (id && email && authStatus) {
+      this.user.set(new User(id, email));
+      this.isAuthenticated.set(true);
+    } else {
+      this.user.set(null);
+      this.isAuthenticated.set(false);
+    }
+  }
+
 
 
   logout() {
@@ -43,7 +54,6 @@ export class AuthService {
     localStorage.removeItem(LocalStorageKeys.USER_ID);
     localStorage.removeItem(LocalStorageKeys.USER_EMAIL);
     this.isAuthenticated.set(false);
-    this.userId.set(null);
-    this.userEmail.set(null);
+    this.user.set(null);
   }
 }
