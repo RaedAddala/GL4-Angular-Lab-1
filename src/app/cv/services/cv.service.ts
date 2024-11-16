@@ -1,4 +1,4 @@
-import { Injectable, inject } from "@angular/core";
+import { Injectable, inject ,signal} from "@angular/core";
 import { Cv } from "../model/cv";
 import { Observable, Subject } from "rxjs";
 import { HttpClient, HttpParams } from "@angular/common/http";
@@ -10,7 +10,7 @@ import { API } from "../../../config/api.config";
 export class CvService {
   private http = inject(HttpClient);
 
-  private cvs: Cv[] = [];
+  private cvs = signal<Cv[]>([]);
   /**
    * Le subject permettant de créer le flux des cvs sélectionnés
    */
@@ -23,10 +23,10 @@ export class CvService {
   /** Inserted by Angular inject() migration for backwards compatibility */
   constructor(...args: unknown[]);
   constructor() {
-    this.cvs = [
+    this.cvs.set([
       new Cv(1, "aymen", "sellaouti", "teacher", "as.jpg", "1234", 40),
       new Cv(2, "skander", "sellaouti", "enfant", "       ", "1234", 4),
-    ];
+    ]);
   }
 
   /**
@@ -37,7 +37,7 @@ export class CvService {
    *
    */
   getFakeCvs(): Cv[] {
-    return this.cvs;
+    return this.cvs();
   }
 
   /**
@@ -87,7 +87,7 @@ export class CvService {
    * @returns Cv | null
    */
   findCvById(id: number): Cv | null {
-    return this.cvs.find((cv) => cv.id == id) ?? null;
+    return this.cvs().find((cv) => cv.id == id) ?? null;
   }
 
   /**
@@ -98,9 +98,11 @@ export class CvService {
    * @returns boolean
    */
   deleteCv(cv: Cv): boolean {
-    const index = this.cvs.indexOf(cv);
+    const currentCvs = this.cvs();
+    const index = currentCvs.indexOf(cv);
     if (index > -1) {
-      this.cvs.splice(index, 1);
+      currentCvs.splice(index, 1);
+      this.cvs.set([...currentCvs]);
       return true;
     }
     return false;
