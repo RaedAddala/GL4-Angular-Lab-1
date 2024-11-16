@@ -51,6 +51,7 @@ import { ProductsComponent } from "./products/products.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { AutocompleteComponent } from "./cv/autocomplete/autocomplete.component";
 import { SliderComponent } from "./rxjs/slider/slider.component";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -92,20 +93,21 @@ import { SliderComponent } from "./rxjs/slider/slider.component";
     ProductsComponent,
   ],
   bootstrap: [AppComponent],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
-    AppRoutingModule,
-    ReactiveFormsModule,
-    ServiceWorkerModule.register("ngsw-worker.js", {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: "registerWhenStable:30000",
-    }),
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule, // required animations module
+        ToastrModule.forRoot(), // ToastrModule added
+        AppRoutingModule,
+        ReactiveFormsModule,
+        ServiceWorkerModule.register("ngsw-worker.js", {
+            enabled: !isDevMode(),
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: "registerWhenStable:30000",
+        }),
+        NgOptimizedImage,
+    ],
   providers: [
     AuthInterceptorProvider,
     provideHttpClient(withInterceptorsFromDi()),
