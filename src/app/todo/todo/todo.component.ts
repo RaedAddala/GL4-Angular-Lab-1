@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { Todo, TodoStatus } from '../model/todo';
 import { TodoService } from '../service/todo.service';
 import { FormsModule } from '@angular/forms';
@@ -15,9 +15,20 @@ import { CommonModule } from '@angular/common';
 export class TodoComponent {
   private todoService = inject(TodoService);
 
-
   todos = this.todoService.getTodos();
   todo = new Todo();
+
+  waitingTodos = computed(() =>
+    this.todos().filter(todo => todo.status === 'waiting')
+  );
+
+  inProgressTodos = computed(() =>
+    this.todos().filter(todo => todo.status === 'in progress')
+  );
+
+  doneTodos = computed(() =>
+    this.todos().filter(todo => todo.status === 'done')
+  );
 
   addTodo() {
     this.todoService.addTodo(this.todo);
@@ -26,10 +37,6 @@ export class TodoComponent {
 
   deleteTodo(todo: Todo) {
     this.todoService.deleteTodo(todo);
-  }
-
-  getTodosByStatus(status: TodoStatus): Todo[] {
-    return this.todos().filter(todo => todo.status === status);
   }
 
   changeStatus(todo: Todo, status: TodoStatus) {

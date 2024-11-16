@@ -13,7 +13,6 @@ export class ArcEnCielDirective  {
 
   
 
-  // Array of colors
   private colors: string[] = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
   
   constructor(private el: ElementRef) {
