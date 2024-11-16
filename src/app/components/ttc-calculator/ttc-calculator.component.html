@@ -3,21 +3,39 @@
   <div class="form-container">
     <div class="form-group">
       <label>Prix HT</label>
-      <input type="number" [(ngModel)]="priceHT" (input)="calculatePrices()" placeholder="Enter price HT" class="form-control" />
+      <input
+        type="number"
+        [value]="priceHT()"
+        (input)="priceHT.set($any($event.target).valueAsNumber)"
+        placeholder="Enter price HT"
+        class="form-control"
+      />
     </div>
     <div class="form-group">
       <label>Quantité</label>
-      <input type="number" [(ngModel)]="quantity" (input)="calculatePrices()" placeholder="Enter quantity" class="form-control" />
+      <input
+        type="number"
+        [value]="quantity()"
+        (input)="quantity.set($any($event.target).valueAsNumber)"
+        placeholder="Enter quantity"
+        class="form-control"
+      />
     </div>
     <div class="form-group">
       <label>TVA (%)</label>
-      <input type="number" [(ngModel)]="tva" (input)="calculatePrices()" placeholder="Enter TVA" class="form-control" />
+      <input
+        type="number"
+        [value]="tva()"
+        (input)="tva.set($any($event.target).valueAsNumber)"
+        placeholder="Enter TVA"
+        class="form-control"
+      />
     </div>
   </div>
-  
+
   <div class="results">
-    <p>Prix unitaire TTC: ${{ unitTtcPrice.toFixed(2) }}</p>
-    <p>Prix total TTC: ${{ totalTtcPrice.toFixed(2) }}</p>
-    <p>Discount: ${{ (unitTtcPrice * quantity * discount).toFixed(2) }}</p>
+    <p>Prix unitaire TTC: ${{ unitTtcPrice().toFixed(2) }}</p>
+    <p>Prix total TTC: ${{ totalTtcPrice().toFixed(2) }}</p>
+    <p>Discount: ${{ (unitTtcPrice() * quantity() * discount()).toFixed(2) }}</p>
   </div>
 </div>

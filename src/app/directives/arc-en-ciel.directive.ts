@@ -2,7 +2,7 @@ import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core'
 
 
 @Directive({
-  selector: '[appArcEnCiel]',
+  selector: 'input[appArcEnCiel][type=text]',
   standalone: true
 })
 export class ArcEnCielDirective  {
@@ -15,10 +15,8 @@ export class ArcEnCielDirective  {
 
   private colors: string[] = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
   
-  constructor(private el: ElementRef) {
-    if (el.nativeElement.tagName.toLowerCase() !== 'input') {
-      throw new Error('appArcEnCiel directive can only be applied to input elements');
-    }
+  constructor() {
+   
   }
 
   @HostListener('keyup') onKeyUp() {

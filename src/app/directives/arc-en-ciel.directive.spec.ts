@@ -3,8 +3,7 @@ import { ElementRef } from '@angular/core';
 
 describe('ArcEnCielDirective', () => {
   it('should create an instance', () => {
-    const mockElementRef = new ElementRef(document.createElement('input')); // mock ElementRef
-    const directive = new ArcEnCielDirective(mockElementRef);
+    const directive = new ArcEnCielDirective();
     expect(directive).toBeTruthy();
   });
 });

@@ -1,38 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-ttc-calculator',
   standalone: true,
-  imports: [FormsModule],  
+  imports: [FormsModule],
   templateUrl: './ttc-calculator.component.html',
   styleUrls: ['./ttc-calculator.component.css']
 })
 export class TtcCalculatorComponent {
-  priceHT: number = 0; 
-  quantity: number = 1; 
-  tva: number = 18; 
-  unitTtcPrice: number = 0;
-  totalTtcPrice: number = 0;
-  discount: number = 0;
 
-  constructor() {
-    this.calculatePrices();
-  }
+  priceHT = signal(0);
+  quantity = signal(1);
+  tva = signal(18);
 
+  unitTtcPrice = computed(() => this.priceHT() * (1 + this.tva() / 100));
 
-  calculatePrices() {
-    this.unitTtcPrice = this.priceHT * (1 + this.tva / 100);
+  discount = computed(() => {
+    const qty = this.quantity();
+    if (qty >= 10 && qty <= 15) return 0.20;
+    if (qty > 15) return 0.30;
+    return 0;
+  });
 
-    if (this.quantity >= 10 && this.quantity <= 15) {
-      this.discount = 0.20;
-    } else if (this.quantity > 15) {
-      this.discount = 0.30;
-    } else {
-      this.discount = 0;
-    }
-
-    const discountAmount = this.unitTtcPrice * this.quantity * this.discount;
-    this.totalTtcPrice = this.unitTtcPrice * this.quantity - discountAmount;
-  }
+  totalTtcPrice = computed(() => {
+    const unitPrice = this.unitTtcPrice();
+    const qty = this.quantity();
+    const discountAmount = unitPrice * qty * this.discount();
+    return unitPrice * qty - discountAmount;
+  });
 }
