@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="add smth">
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/cv-card/cv-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv-card/cv-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/cv/cv/cv.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv/cv.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/cv/cv/cv.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv/cv.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/details-cv/details-cv.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/details-cv/details-cv.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/details-cv/details-cv.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/details-cv/details-cv.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +112,8 @@
       <workItem from="1731617372661" duration="5237000" />
       <workItem from="1731665441545" duration="1584000" />
       <workItem from="1731744662684" duration="9753000" />
+      <workItem from="1732817826800" duration="1385000" />
+      <workItem from="1732819289595" duration="1549000" />
     </task>
     <task id="LOCAL-00001" summary="use new control flow">
       <option name="closed" value="true" />

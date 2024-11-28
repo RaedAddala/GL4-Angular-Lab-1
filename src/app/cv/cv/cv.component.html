@@ -3,7 +3,15 @@
     <div class="alert alert-warning">
       {{ date$ | async }}
     </div>
-    <app-list [cvs]="cvs$ | async"></app-list>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" (click)="switchTab(true)" [class.active]="selectedTab$.value === true">Juniors </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="switchTab(false)" [class.active]="selectedTab$.value === false">Seniors </a>
+      </li>
+    </ul>
+    <app-list [cvs]="filteredCvs$ | async"></app-list>
   </div>
   <div class="col">
     <app-cv-card [cv]="selectedCv$ | async"></app-cv-card>

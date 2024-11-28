@@ -3,7 +3,7 @@ import { Cv } from "../model/cv";
 import { LoggerService } from "../../services/logger.service";
 import { ToastrService } from "ngx-toastr";
 import { CvService } from "../services/cv.service";
-import { catchError, map, of } from "rxjs";
+import {BehaviorSubject, catchError, combineLatest, map, Observable, of, tap} from "rxjs";
 import { DatePipe } from "@angular/common";
 
 @Component({
@@ -13,14 +13,24 @@ import { DatePipe } from "@angular/common";
   providers: [DatePipe],
 })
 export class CvComponent {
-
+   // Filtered CVs based on the tab selected
+  selectedTab$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
   cvs$ = this.cvService.getCvs().pipe(
+
     catchError(() => {
       this.toastr.error(`
         Attention!! Les données sont fictives, problème avec le serveur.
         Veuillez contacter l'admin.`);
       return of(this.cvService.getFakeCvs());
     })
+  );
+  filteredCvs$: Observable<any[]>=combineLatest([this.cvs$, this.selectedTab$]).pipe(
+    map(([cvs, selectedTab]) => {
+      return cvs.filter((cv: Cv) => {
+        return selectedTab ? cv.age < 40 : cv.age >= 40;
+      });
+    }),
+
   );
 
   selectedCv$ = this.cvService.selectCv$.pipe(
@@ -30,6 +40,9 @@ export class CvComponent {
   date$ = of(new Date()).pipe(
     map((date) => this.datePipe.transform(date, 'fullDate')?.toUpperCase())
   );
+  switchTab(selectedTab: boolean) {
+    this.selectedTab$.next(selectedTab);
+  }
 
   constructor(
     private logger: LoggerService,
