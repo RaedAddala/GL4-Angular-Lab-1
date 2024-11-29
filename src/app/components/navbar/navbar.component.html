@@ -74,6 +74,12 @@
           >Login</a
         >
         <a
+          class="nav-link"
+          [routerLink]="['products']"
+          routerLinkActive="active text-primary"
+        >Products</a
+        >
+        <a
           *ngIf="authService.isAuthenticated()"
           class="nav-link"
           (click)="logout()"
