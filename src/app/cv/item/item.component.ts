@@ -13,6 +13,6 @@ export class ItemComponent {
   constructor(private cvService: CvService) {}
 
   onSelectCv() {
-    this.cvService.selectCv(this.cv);
+    this.cvService.selectCvs(this.cv);
   }
 }

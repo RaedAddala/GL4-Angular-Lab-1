@@ -128,7 +128,8 @@ export class CvService {
    *
    * @param cv : Le cv à ajouter dans le flux des cvs sélectionnés
    */
-  selectCv(cv: Cv) {
+  selectCvs(cv: Cv) {
     this.#selectCvSuject$.next(cv);
   }
+
 }

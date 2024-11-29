@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="add smth">
+    <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="add Junior/Sinior tabs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/autocomplete/autocomplete.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/autocomplete/autocomplete.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/autocomplete/autocomplete.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/autocomplete/autocomplete.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/cv/cv/cv.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv/cv.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/cv/cv/cv.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv/cv.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/item/item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/item/item.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/services/cv.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/services/cv.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +118,8 @@
       <workItem from="1731665441545" duration="1584000" />
       <workItem from="1731744662684" duration="9753000" />
       <workItem from="1732817826800" duration="1385000" />
-      <workItem from="1732819289595" duration="1549000" />
+      <workItem from="1732819289595" duration="3692000" />
+      <workItem from="1732885774552" duration="2385000" />
     </task>
     <task id="LOCAL-00001" summary="use new control flow">
       <option name="closed" value="true" />
@@ -147,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731749435230</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Junior/Sinior tabs">
+      <option name="closed" value="true" />
+      <created>1732820949693</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732820949694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +172,8 @@
     <MESSAGE value="using signal in authservice" />
     <MESSAGE value="using signal in cvtech" />
     <MESSAGE value="add smth" />
-    <option name="LAST_COMMIT_MESSAGE" value="add smth" />
+    <MESSAGE value="add Junior/Sinior tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Junior/Sinior tabs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
