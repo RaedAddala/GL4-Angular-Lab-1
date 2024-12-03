@@ -7,10 +7,10 @@
     <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="add auto complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/products.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/const.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/const.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/services/cv.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/services/cv.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="signal" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -37,7 +42,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="rxjs" />
-                    <option name="lastUsedInstant" value="1731749448" />
+                    <option name="lastUsedInstant" value="1732891371" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="signal" />
@@ -118,6 +123,7 @@
       <workItem from="1732817826800" duration="1385000" />
       <workItem from="1732819289595" duration="3692000" />
       <workItem from="1732885774552" duration="4827000" />
+      <workItem from="1733225393803" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="use new control flow">
       <option name="closed" value="true" />
@@ -181,16 +187,5 @@
     <MESSAGE value="add Junior/Sinior tabs" />
     <MESSAGE value="add auto complete" />
     <option name="LAST_COMMIT_MESSAGE" value="add auto complete" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main.ts</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,14 +1,16 @@
-import { Injectable } from "@angular/core";
+import {inject, Injectable} from "@angular/core";
 import { Cv } from "../model/cv";
 import { Observable, Subject } from "rxjs";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { API } from "../../../config/api.config";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: "root",
 })
 export class CvService {
   private cvs: Cv[] = [];
+  router: Router=inject(Router);
   /**
    * Le subject permettant de créer le flux des cvs sélectionnés
    */
@@ -130,6 +132,15 @@ export class CvService {
    */
   selectCvs(cv: Cv) {
     this.#selectCvSuject$.next(cv);
+    if (this.router.url.startsWith('/list')) {
+      this.router.navigate(['/list', cv.id]);
+      console.log('we are in cvif id', cv.id);
+    }
+    else {
+      console.log('ohhh we are in else');
+      console.log('we are in url', this.router.url);
+      console.log('we are in cv id', cv.id);
+    }
   }
 
 }

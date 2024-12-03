@@ -52,6 +52,7 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { AutocompleteComponent } from "./cv/autocomplete/autocomplete.component";
 import { SliderComponent } from "./rxjs/slider/slider.component";
 import {NgOptimizedImage} from "@angular/common";
+import {MasterDetailsCvComponent} from "./cv/master-details-cv/master-details-cv.component";
 
 @NgModule({
     declarations: [
@@ -65,6 +66,7 @@ import {NgOptimizedImage} from "@angular/common";
         FilsComponent,
         AddCvComponent,
         CvComponent,
+        MasterDetailsCvComponent,
         ListComponent,
         ItemComponent,
         DetailsCvComponent,
@@ -112,8 +114,9 @@ import {NgOptimizedImage} from "@angular/common";
         AuthInterceptorProvider,
         provideHttpClient(withInterceptorsFromDi()),
     ],
-    exports: [
-        AutocompleteComponent
-    ]
+  exports: [
+    AutocompleteComponent,
+    ListComponent
+  ]
 })
 export class AppModule {}
