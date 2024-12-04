@@ -1,3 +1,16 @@
 <form [formGroup]="form">
-  <input type="text" class="form-control" formControlName="search" />
+  <input type="text" class="form-control" formControlName="search" placeholder="Search for CVs..." />
 </form>
+<ul *ngIf="filteredCvs$ | async as filteredCvs" class="list-group mt-2">
+  <li
+    *ngFor="let cv of filteredCvs; let isOdd = odd"
+    [ngClass]="{
+      'list-group-item-primary': isOdd,
+      'list-group-item-secondary': !isOdd
+    }"
+    class="list-group-item"
+    [routerLink]="['/cv', cv.id]"
+  >
+    <app-item [cv]="cv"></app-item>
+  </li>
+</ul>

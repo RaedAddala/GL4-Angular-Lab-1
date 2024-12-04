@@ -4,7 +4,7 @@ import { LoggerService } from "../../services/logger.service";
 import { ToastrService } from "ngx-toastr";
 import { CvService } from "../services/cv.service";
 import {BehaviorSubject, catchError, combineLatest, map, Observable, of, tap} from "rxjs";
-import { DatePipe } from "@angular/common";
+import {AsyncPipe, DatePipe} from "@angular/common";
 
 @Component({
   selector: "app-cv",

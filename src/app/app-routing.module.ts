@@ -13,11 +13,22 @@ import { NF404Component } from "./components/nf404/nf404.component";
 //import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
 import { RhComponent } from "./optimizationPattern/rh/rh.component";
 import { CustomPreloadingStrategy } from "./custom-preloading.strategy";
+import { DetailsCvComponent } from "./cv/details-cv/details-cv.component";
+import {ProductsComponent} from "./products/products.component";
+import {MasterDetailsCvComponent} from "./cv/master-details-cv/master-details-cv.component";
 
 const routes: Route[] = [
   { path: "login", component: LoginComponent },
   { path: "rh", component: RhComponent },
   { path: 'cv', loadChildren: () => import('./cv/cv.module').then(m => m.CvModule) },  //this is us lazy loading the cvs
+  { path: "products", component: ProductsComponent },
+  /*{
+    path: "cv",
+    component: CvComponent,
+  },
+
+  { path: "cv/add", component: AddCvComponent, canActivate: [AuthGuard] },
+  { path: "cv/:id", component: DetailsCvComponent },*/
   {
     path: "",
     component: FrontComponent,
@@ -33,6 +44,12 @@ const routes: Route[] = [
     path: "admin",
     component: AdminComponent,
     children: [{ path: "color", component: ColorComponent }],
+  },
+  { path: "list",
+   component: MasterDetailsCvComponent,
+   children : [
+    {path: ":id" , component : DetailsCvComponent}
+   ]
   },
   { path: "**", component: NF404Component },
 ];
