@@ -64,12 +64,9 @@ import {MasterDetailsCvComponent} from "./cv/master-details-cv/master-details-cv
         CardProfilComponent,
         PereComponent,
         FilsComponent,
-        AddCvComponent,
-        CvComponent,
         MasterDetailsCvComponent,
         ListComponent,
         ItemComponent,
-        DetailsCvComponent,
         CvCardComponent,
         CardProfilComponent,
         EmbaucheComponent,
@@ -116,7 +113,10 @@ import {MasterDetailsCvComponent} from "./cv/master-details-cv/master-details-cv
     ],
   exports: [
     AutocompleteComponent,
-    ListComponent
+    ListComponent,
+    EmbaucheComponent,
+    CvCardComponent,
+    DefaultImagePipe
   ]
 })
 export class AppModule {}

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="add auto complete">
+    <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_11_2024_15_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_11_2024_15_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/master-details-cv/master-details-cv.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/services/cv.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/services/cv.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/cv.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +40,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="rxjs" />
-                    <option name="lastUsedInstant" value="1732891371" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="signal" />
-                    <option name="lastUsedInstant" value="1731749447" />
+                    <option name="lastUsedInstant" value="1733852336" />
                   </RecentBranch>
                 </list>
               </option>
@@ -186,6 +180,6 @@
     <MESSAGE value="add smth" />
     <MESSAGE value="add Junior/Sinior tabs" />
     <MESSAGE value="add auto complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="add auto complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
