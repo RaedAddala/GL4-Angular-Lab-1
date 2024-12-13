@@ -22,9 +22,12 @@
   </div>
   Job: <input type="text" class="form-control" formControlName="job" /> Path:
   <input type="text" class="form-control" formControlName="path" />
+  <div *ngIf="age.touched &&form.get('age')?.value < 18" class="alert alert-info">
+    You must be 18 or older to upload a path for the image.
+  </div>
 
   <button [disabled]="form.invalid" class="btn btn-primary" (click)="addCv()">
-    add cv
+    Add CV
   </button>
 </form>
 {{ form.errors | json }}
