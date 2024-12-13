@@ -20,7 +20,7 @@ import {MasterDetailsCvComponent} from "./cv/master-details-cv/master-details-cv
 const routes: Route[] = [
   { path: "login", component: LoginComponent },
   { path: "rh", component: RhComponent },
-  { path: 'cv', loadChildren: () => import('./cv/cv.module').then(m => m.CvModule) },  //this is us lazy loading the cvs
+  { path: 'cv', loadChildren: () => import('./cv/cv-routing.module').then(m => m.CvRoutingModule) },
   { path: "products", component: ProductsComponent },
   /*{
     path: "cv",

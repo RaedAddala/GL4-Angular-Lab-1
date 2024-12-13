@@ -7,8 +7,11 @@
     <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_11_2024_15_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_11_2024_15_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/cv.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/cv-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/cv-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cv/cv.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/todo/todo.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/todo/todo.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="rxjs" />
-                    <option name="lastUsedInstant" value="1733852336" />
+                    <option name="lastUsedInstant" value="1734097069" />
                   </RecentBranch>
                 </list>
               </option>
