@@ -1,4 +1,4 @@
-<div class="alert alert-info">List of {{usersCluster}}</div>
+<div class="alert alert-info">List of {{ usersCluster }}</div>
 <div class="row">
   <div class="col-9">
     <input type="text" class="form-control" [(ngModel)]="userFullName">
@@ -11,6 +11,6 @@
   <li
     *ngFor="let user of users"
     class="list-group-item">
-    {{user.name}} : {{user.age}} [{{fibo(user.age)}}]
+    {{ user.name }} : {{ user.age }} [{{ user.age | fibonacci }}]
   </li>
 </ol>

@@ -1,6 +1,7 @@
-import {Component,Input,Output,EventEmitter,ChangeDetectionStrategy,} from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, Pipe, PipeTransform } from '@angular/core';
 import { User } from '../users.service';
 import Memoize from 'memo-decorator';
+
 
 export const fibonacci = (n: number): number => {
   let a = 1, b = 1;
@@ -9,6 +10,20 @@ export const fibonacci = (n: number): number => {
   }
   return b;
 };
+
+@Pipe({
+  name: 'fibonacci',
+  pure: true,
+})
+export class FibonacciPipe implements PipeTransform {
+  transform(n: number): number {
+    if (n < 0 || !Number.isInteger(n)) {
+      throw new Error('Invalid input: n must be a non-negative integer.');
+    }
+    return fibonacci(n);
+  }
+}
+
 
 @Component({
   selector: 'app-user-list',
@@ -25,21 +40,12 @@ export class UserListComponent {
 
   addUser() {
     const trimmedName = this.userFullName.trim();
-    if (!trimmedName) return; 
-    if (this.users.some(user => user.name === trimmedName)) {
+    if (!trimmedName) return;
+    if (this.users.some((user) => user.name === trimmedName)) {
       console.warn('Duplicate name not added');
-      return; 
+      return;
     }
     this.add.emit(trimmedName);
     this.userFullName = '';
-  }
-
-  @Memoize()
-  fibo(n: number): number {
-    if (n < 0 || !Number.isInteger(n)) {
-      throw new Error('Invalid input: n must be a non-negative integer.');
-    }
-    const fib = fibonacci(n);
-    return fib;
   }
 }
