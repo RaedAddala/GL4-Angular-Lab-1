@@ -35,7 +35,7 @@ import { TestObservableComponent } from "./rxjs/test-observable/test-observable.
 import { TestHttpComponent } from "./components/test-http/test-http.component";
 import { AuthInterceptorProvider } from "./auth/interceptors/auth.interceptor";
 import { RhComponent } from "./optimizationPattern/rh/rh.component";
-import { UserListComponent } from "./optimizationPattern/user-list/user-list.component";
+import {FibonacciPipe, UserListComponent} from "./optimizationPattern/user-list/user-list.component";
 import { ProductsComponent } from "./products/products.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { SliderComponent } from "./rxjs/slider/slider.component";
@@ -69,6 +69,7 @@ import {TodoModule} from "./todo/todo.module";
         RhComponent,
         UserListComponent,
         ProductsComponent,
+      FibonacciPipe
     ],
     bootstrap: [AppComponent],
     imports: [

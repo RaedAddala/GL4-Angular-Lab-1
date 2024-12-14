@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc295b2b-10eb-46ec-aaa9-97b52d1d1f5f" name="Changes" comment="fix lazy loading">
-      <change afterPath="$PROJECT_DIR$/src/app/cv/validators/cinvalidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/cv/validators/formvalidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/form.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_11_2024_15_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_11_2024_15_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cv/add-cv/add-cv.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/add-cv/add-cv.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/cv/add-cv/add-cv.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cv/add-cv/add-cv.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/optimizationPattern/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/optimizationPattern/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +119,7 @@
       <workItem from="1732819289595" duration="3692000" />
       <workItem from="1732885774552" duration="4827000" />
       <workItem from="1733225393803" duration="1050000" />
+      <workItem from="1734170869512" duration="871000" />
     </task>
     <task id="LOCAL-00001" summary="use new control flow">
       <option name="closed" value="true" />

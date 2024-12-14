@@ -65,13 +65,13 @@ export class AddCvComponent implements OnInit , OnDestroy{
       this.form.patchValue(this.formService.getForm());
     }
 
-    this.form.valueChanges.subscribe(form => {
-        this.formService.saveForm(form);
-      }
+    this.form.valueChanges.subscribe((value) => {
+      console.log('Form value changed:', value);
+      this.formService.saveForm(value);
+    }
     )
   }
   ngOnDestroy(): void {
-    this.formService.clearForm();
   }
 
 
@@ -88,6 +88,8 @@ export class AddCvComponent implements OnInit , OnDestroy{
           console.error('Error occurred while adding CV:', err); // Optional: Log the error for debugging
         },
       });
+      this.formService.clearForm();
+
     } else {
       this.toastr.error('Veuillez remplir tous les champs requis correctement.');
       this.form.markAllAsTouched();
